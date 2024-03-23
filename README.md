@@ -41,7 +41,7 @@ _Inserta aquí algunas capturas de pantalla de la aplicación._
 
 ## API Utilizada
 
-La aplicación se conecta a una API RESTful para obtener y enviar datos. Puedes encontrar la documentación de la API en el siguiente enlace: [API de Erika's HomeMade](https://api-movil-rh0g.onrender.com).
+La aplicación se conecta a una API RESTful para obtener y enviar datos. Puedes encontrar la documentación de la API en el siguiente enlace: [API de Erika's HomeMade](https://api-movil-rh0g.onrender.com/api/users).
 
 ## Contribución
 
