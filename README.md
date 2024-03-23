@@ -2,7 +2,7 @@
 
 # Erika's HomeMade App
 
-![Erika's HomeMade Logo](https://example.com/logo.png)
+![Erika's HomeMade Logo](https://raw.githubusercontent.com/DarkKing516/entregableFlutterErikas/main/assets/images/mi_icono.png)
 
 ## Descripción
 
@@ -55,10 +55,6 @@ Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
 
 ## Créditos
 
-Desarrollado por [Tu Nombre o Nickname](https://github.com/tu-usuario).
-
-## Licencia
-
-Este proyecto está bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
+Desarrollado por [Grupo Erika's HomeMade](https://github.com/DarkKing516).
 
 --- 
