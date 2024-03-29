@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'account.dart';
 import 'edit_user.dart';
 import 'main.dart';
 import 'citas.dart';
@@ -81,6 +82,16 @@ class DrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.account_circle),
+            title: const Text('Cuenta'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Account()),
+              );
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Cerrar Sesión'),
             onTap: () {
@@ -106,7 +117,7 @@ class DrawerWidget extends StatelessWidget {
           CircleAvatar(
             radius: 52,
             backgroundImage: NetworkImage(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-W3cjqQ8UP7u76dDcNdf1PzCrmgFjmE1MU7RQCZYsaQ&s'),
+                'https://raw.githubusercontent.com/DarkKing516/entregableFlutterErikas/main/assets/images/mi_icono.png'),
           ),
           SizedBox(height: 12),
           Text(

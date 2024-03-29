@@ -147,7 +147,10 @@ class _EditUserState extends State<EditUser> {
           actions: <Widget>[
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyHomePage()),
+                );
               },
               child: const Text('Aceptar'),
             ),

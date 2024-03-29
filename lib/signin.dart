@@ -6,7 +6,7 @@ import 'dart:convert';
 import 'main.dart'; // for using json.decode()
 
 void main() {
-  runApp(LoginBonito());
+  runApp(const LoginBonito());
 }
 
 class LoginBonito extends StatelessWidget {
@@ -26,7 +26,7 @@ class LoginBonito extends StatelessWidget {
               child: Container(
                 width: 200,
                 height: 200,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.blue,
                 ),
@@ -66,7 +66,7 @@ class LoginBonito extends StatelessWidget {
               child: Container(
                 width: 200,
                 height: 200,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.blue,
                 ),
@@ -113,6 +113,7 @@ class LoginForm extends State<LoginPage> {
   String _email = '';
   String _password = '';
   String _userName = '';
+  bool _passwordVisible = false;
 
   Future<void> _login() async {
     if (_formKey.currentState!.validate()) {
@@ -164,13 +165,13 @@ class LoginForm extends State<LoginPage> {
             alignment: Alignment.centerLeft,
             child: Container(
               width: screenWidthPortion,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.grey,
                   width: 1,
                 ),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(60),
                   bottomRight: Radius.circular(60),
                 ),
@@ -181,7 +182,7 @@ class LoginForm extends State<LoginPage> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Correo electrónico',
                         border: InputBorder.none,
                       ),
@@ -198,12 +199,22 @@ class LoginForm extends State<LoginPage> {
                       },
                     ),
                     const Divider(),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextFormField(
-                      obscureText: true,
+                      obscureText: !_passwordVisible,
                       decoration: InputDecoration(
                         hintText: 'Contraseña',
                         border: InputBorder.none,
+                        // suffixIcon: IconButton(
+                        //   icon: Icon(_passwordVisible
+                        //       ? Icons.visibility_off
+                        //       : Icons.visibility),
+                        //   onPressed: () {
+                        //     setState(() {
+                        //       _passwordVisible = !_passwordVisible;
+                        //     });
+                        //   },
+                        // ),
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -228,11 +239,14 @@ class LoginForm extends State<LoginPage> {
             child: ElevatedButton(
               onPressed: _login,
               style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(24),
+                shape: const CircleBorder(),
+                padding: const EdgeInsets.all(24),
                 backgroundColor: Colors.lightBlue,
               ),
-              child: Icon(Icons.arrow_forward),
+              child: const Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
