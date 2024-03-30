@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       // Hide the debug banner
       debugShowCheckedModeBanner: false,
       title: 'Editar Usuario',
-      home: const EditUser(),
+      home: EditUser(),
     );
   }
 }
@@ -136,8 +136,8 @@ class _EditUserState extends State<EditUser> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Éxito'),
-          content: SingleChildScrollView(
+          title: const Text('Éxito'),
+          content: const SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 Text('Los datos se actualizaron correctamente.'),
@@ -166,8 +166,8 @@ class _EditUserState extends State<EditUser> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Error'),
-          content: SingleChildScrollView(
+          title: const Text('Error'),
+          content: const SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 Text('Ocurrió un error al actualizar los datos.'),
@@ -194,7 +194,7 @@ class _EditUserState extends State<EditUser> {
         title: Text('Editando Información de ${LoginPage.userName}'),
       ),
       body: _loading
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : _error
@@ -209,7 +209,7 @@ class _EditUserState extends State<EditUser> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginBonito()),
+                                builder: (context) => const LoginBonito()),
                           );
                         },
                         child: const Text('Regresar'),
@@ -262,6 +262,7 @@ class _EditUserState extends State<EditUser> {
                         ),
                         obscureText: !_isPasswordVisible,
                       ),
+                      const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

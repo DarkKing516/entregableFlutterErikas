@@ -81,16 +81,16 @@ class DrawerWidget extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.account_circle),
-            title: const Text('Cuenta'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => Account()),
-              );
-            },
-          ),
+          // ListTile(
+          //   leading: const Icon(Icons.account_circle),
+          //   title: const Text('Cuenta'),
+          //   onTap: () {
+          //     Navigator.pushReplacement(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => Account()),
+          //     );
+          //   },
+          // ),
           ListTile(
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Cerrar Sesión'),
