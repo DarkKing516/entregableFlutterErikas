@@ -53,6 +53,10 @@ Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
 4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
 5. Crea un nuevo Pull Request.
 
+## APK
+
+[Podrás encontrar el APK aquí](https://drive.google.com/drive/folders/1NUaQJ4OOBQv5PSDWO_nKDaMVxbhEVrVn?usp=sharing).
+
 ## Créditos
 
 Desarrollado por [Grupo Erika's HomeMade](https://github.com/DarkKing516).
