@@ -31,21 +31,21 @@ class Products extends StatelessWidget {
                       children: [
                         const SizedBox(height: 8),
                         Text(
-                          'Product Name: ${product['name']}',
+                          'Producto : ${product['name']}',
                           style: const TextStyle(
                             fontSize: 18,
                           ),
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'Quantity: ${product['quantity']}',
+                          'Cantidad: ${product['quantity']}',
                           style: const TextStyle(
                             fontSize: 16,
                           ),
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'Price: \$${product['price']}',
+                          'Precio: \$${product['price']}',
                           style: const TextStyle(
                             fontSize: 16,
                           ),
