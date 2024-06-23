@@ -223,7 +223,12 @@ class _EditUserState extends State<EditUser> {
                     children: [
                       TextFormField(
                         controller: _nameController,
-                        decoration: const InputDecoration(labelText: 'Nombre'),
+                        readOnly: true, // Make this field read-only
+                        decoration: const InputDecoration(
+                          labelText: 'Nombre',
+                          enabled:
+                              false, // Disable the field to change its style
+                        ),
                       ),
                       TextFormField(
                         controller: _phoneController,
@@ -232,8 +237,12 @@ class _EditUserState extends State<EditUser> {
                       ),
                       TextFormField(
                         controller: _documentController,
-                        decoration:
-                            const InputDecoration(labelText: 'Documento'),
+                        readOnly: true, // Make this field read-only
+                        decoration: const InputDecoration(
+                          labelText: 'Documento',
+                          enabled:
+                              false, // Disable the field to change its style
+                        ),
                       ),
                       TextFormField(
                         controller: _emailController,

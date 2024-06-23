@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'drawer.dart';
 import 'signin.dart';
 import 'main.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,6 +75,12 @@ class _CitasState extends State<Citas> {
     }
   }
 
+  String formatDate(String dateStr) {
+    DateTime date =
+        DateTime.parse(dateStr); // Parse the string to a DateTime object
+    return DateFormat('dd/MM/yyyy').format(date); // Format the date
+  }
+
   void _showDetails(Map<String, dynamic> journalData) {
     showDialog(
       context: context,
@@ -84,10 +91,11 @@ class _CitasState extends State<Citas> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('ID Usuario: ${LoginPage.odiii}'),
+              // Text('ID Usuario: ${LoginPage.odiii}'),
               Text('Nombre Usuario: ${journalData['user_name']}'),
-              Text('Fecha: ${journalData['appointment_date']}'),
-              Text('Descripción: ${journalData['description']}'),
+              // Text('Fecha: ${journalData['appointment_date']}'),
+              Text('Fecha: ${formatDate(journalData['appointment_date'])}'), // Formatted date
+              Text('Descripción:\n ${journalData['description']}'),
               Text('Estado: ${journalData['status']}'),
             ],
           ),
@@ -145,7 +153,7 @@ class _CitasState extends State<Citas> {
                           ),
                           SizedBox(height: 8),
                           Text(
-                            'Fecha: ${data[index]['appointment_date']}',
+                            'Fecha: ${formatDate(data[index]['appointment_date'])}',
                             style: TextStyle(
                               fontSize: 16,
                             ),

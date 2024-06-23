@@ -6,6 +6,7 @@ import 'drawer.dart';
 import 'main.dart';
 import 'products.dart';
 import 'signin.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -86,6 +87,12 @@ class _ordersState extends State<orders> {
     );
   }
 
+  String formatDate(String dateStr) {
+    DateTime date =
+        DateTime.parse(dateStr); // Parse the string to a DateTime object
+    return DateFormat('dd/MM/yyyy').format(date); // Format the date
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,16 +130,17 @@ class _ordersState extends State<orders> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                // const SizedBox(height: 8),
+                                // Text(
+                                //   'ID Usuario: ${LoginPage.odiii}',
+                                //   style: const TextStyle(
+                                //     fontSize: 18,
+                                //   ),
+                                // ),
                                 const SizedBox(height: 8),
                                 Text(
-                                  'ID Usuario: ${LoginPage.odiii}',
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  'Fecha de entrega: ${order['delivery_date']}',
+                                  // 'Fecha de entrega: ${order['delivery_date']}',
+                                  'Fecha de entrega: ${formatDate(order['delivery_date'])}',
                                   style: const TextStyle(
                                     fontSize: 18,
                                   ),
